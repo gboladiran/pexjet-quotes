@@ -931,7 +931,7 @@ function calcTotalBlk(){
 // ─── PHOTO LIBRARY ────────────────────────────────────────────────────────────
 function tryLoadLibPhoto(slot,acKey){
   if(photoSrc[slot]==="upload")return;
-  const src=`images/aircraft/${acKey}/${slot===0?"exterior":"cabin"}.jpg`;
+  const src=`aircraft/${acKey}/${slot===0?"exterior":"cabin"}.jpg`;
   const img=new Image();
   img.onload=()=>{
     $(["ph0","ph1"][slot]).innerHTML=`<img src="${src}" alt="Aircraft" onclick="upPhoto(${slot})" title="Click to change">`;
